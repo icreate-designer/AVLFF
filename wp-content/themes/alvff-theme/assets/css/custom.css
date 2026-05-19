@@ -1,0 +1,1434 @@
+/* =========================
+   Base Styles
+========================= */
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  color: #555555;
+}
+
+/* Override Bootstrap danger color to ALVFF orange */
+:root {
+  --bs-danger: #e46212;
+  --bs-danger-rgb: 228, 98, 18;
+}
+
+/* padding */
+.py-7 {
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+}
+
+
+/* Override Bootstrap danger color to ALVFF orange */
+:root {
+  --bs-danger: #e46212;
+  --bs-danger-rgb: 228, 98, 18;
+  --bs-danger-border-subtle: #f5c6a8;
+  --bs-danger-bg-subtle: #fdf0e8;
+  --bs-danger-text-emphasis: #7a3509;
+}
+
+/* Danger buttons */
+.btn-danger {
+  background-color: #e46212;
+  border-color: #e46212;
+}
+.btn-danger:hover {
+  background-color: #c45510;
+  border-color: #c45510;
+}
+.btn-danger:active,
+.btn-danger:focus-visible {
+  background-color: #b34e0f;
+  border-color: #b34e0f;
+  box-shadow: 0 0 0 0.25rem rgba(228, 98, 18, 0.5);
+}
+.btn-danger:disabled {
+  background-color: #e46212;
+  border-color: #e46212;
+}
+
+/* Outline danger buttons */
+.btn-outline-danger {
+  color: #e46212;
+  border-color: #e46212;
+}
+.btn-outline-danger:hover {
+  background-color: #e46212;
+  border-color: #e46212;
+}
+.btn-outline-danger:active,
+.btn-outline-danger:focus-visible {
+  background-color: #c45510;
+  border-color: #c45510;
+  box-shadow: 0 0 0 0.25rem rgba(228, 98, 18, 0.5);
+}
+/* =========================
+   Typography
+========================= */
+.text-muted-foreground {
+  color: #555555;
+}
+
+.text-danger {
+  color: #e4622d !important;
+}
+
+.text-sm {
+  font-size: 10pt;
+}
+
+.text-navbar {
+  font-size: 11pt;
+}
+
+.text-footer {
+  color: #9e9e9e;
+}
+
+.text-success-light {
+    color:rgb(202, 250, 209) !important;
+}
+
+/* =========================
+   Backgrounds & Colors
+========================= */
+.bg-danger-light-1 {
+  background-color:#dd760933 !important;
+}
+
+.bg-danger-light {
+  background-color: #f5f2ea;
+}
+
+.bg-danger-light2 {
+ background-color:#f5edd4;
+}
+
+.bg-light3 {
+background-color:#fff8f1 !important;
+}
+
+.bg-success {
+  background-color: #3f8834 !important;
+  color:rgb(202, 250, 209) !important;
+}
+
+.bg-dark {
+  background-color: #161616 !important;
+}
+
+/* =========================
+   Utilities
+========================= */
+.rounded-lg {
+  border-radius: 1.3rem;
+}
+
+/* =========================
+   Card image header
+========================= */
+.card-img-header {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0;
+}
+
+/* =========================
+   Icon Styles
+========================= */
+.icon-circle,
+.icon-circle-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  flex-shrink: 0;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.199);
+}
+
+.icon-circle-sm {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(221, 118, 9, 0.199);
+}
+
+/* =========================
+   Project Card
+========================= */
+.project-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.project-card-body {
+  padding: 22px;
+}
+
+/* =========================
+   Carousel
+========================= */
+.carousel-item {
+  position: relative;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.637);
+}
+
+.carousel-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-text {
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .carousel-content {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* =========================
+   Navbar — white by default, glass on scroll
+========================= */
+#mainNavbar {
+  transition: all 0.3s ease;
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+#mainNavbar.scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Links are dark on white background */
+#mainNavbar .nav-link,
+#mainNavbar .navbar-brand {
+  color: #1a1a1a;
+}
+
+/* Links stay dark on the glass background too */
+#mainNavbar.scrolled .nav-link,
+#mainNavbar.scrolled .navbar-brand {
+  color: #1a1a1a;
+}
+
+/* Nav item spacing */
+#mainNavbar .nav-item {
+  margin-inline: 0.5rem;
+}
+
+#mainNavbar .nav-link {
+  padding-inline: 0.6rem;
+}
+
+/* =========================
+   Post content
+========================= */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+
+/*======================*/
+/* Timeline mobile */
+@media (max-width: 768px) {
+  .timeline-item-left  { justify-content: flex-start !important; padding-right: 0 !important; padding-left: 2.5rem !important; }
+  .timeline-item-right { padding-left: 2.5rem !important; }
+}
+/* =========================
+   MISSION PAGE ADDITIONS
+   Append these to custom.css
+========================= */
+
+
+/* mutted button */
+
+.muted-btn {
+  border-radius:4px;
+  padding-left: 4px;
+  padding-right:4px;
+  width:40px;
+  height:40px;
+  background-color:#f9ece4;
+  color:#e46212;
+  text-align: center;
+  align-content: center;
+}
+
+
+.pill-button {
+ border-radius:2rem;
+ padding-left:8px;
+ padding-right:8px;
+ padding-left:4px;
+ padding-bottom:4px;
+ height:40px;
+ width:200px;
+ background-color:#e3eee5;
+ color:green;
+ text-align: center;
+align-content: center;
+}
+
+
+.card {
+  border-radius:14px !important;
+  border-color:#f2efe8 !important;
+
+}
+
+.form-label {
+  font-size:10pt;
+  color:rgb(211, 115, 12);
+}
+
+
+/* Animated Bootstrap dropdown */
+.dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+}
+
+.dropdown-menu.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.badge-danger-light {
+  padding-left:1rem;
+  padding-right:1rem;
+  padding-top:.5rem;
+  padding-bottom:.5rem;
+  font-size:12pt;
+  display:inline-block;
+  color:white;
+  text-align:center;
+ border-radius:1.5rem;
+ background-color:rgba(255, 0, 0, 0.22);
+}
+
+.dot-red {
+  display:inline-block;
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  background-color:red;
+  border-radius:1rem;
+}
+
+
+/* Active nav link — current page */
+#mainNavbar .nav-link.active {
+  color: #c45510 !important;
+}
+
+/* Hover on all nav links */
+#mainNavbar .nav-link:hover {
+  color: #c45510 !important;
+}
+
+/* Active link stays the same color on scrolled (glass) state */
+#mainNavbar.scrolled .nav-link.active {
+  color: #c45510 !important;
+}
+
+/* Dropdown items — hover background + text */
+#mainNavbar .dropdown-menu .dropdown-item:hover,
+#mainNavbar .dropdown-menu .dropdown-item:focus {
+  background-color: #c45510 !important;
+  color: #ffffff !important;
+}
+
+/* Active dropdown item */
+#mainNavbar .dropdown-menu .dropdown-item.active,
+#mainNavbar .dropdown-menu .dropdown-item:active {
+  background-color: #c45510 !important;
+  color: #ffffff !important;
+}
+
+
+/* =========================
+   Project Card
+========================= */
+.project-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.project-card-body {
+  padding: 22px;
+}
+
+/* Image wrapper — clips zoom + positions badge */
+.project-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0;
+}
+
+/* The image itself */
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom on card hover */
+.card:hover .project-img {
+  transform: scale(1.07);
+}
+
+/* Category badge — top-left corner of image */
+.project-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #c0390b;
+  color: #ffffff;
+  font-size: 10pt;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+
+.icon-circle-green {
+  background-color: #e3eee5;
+  color: #3f8834;
+}
+
+
+/* =========================
+   Donation type toggle
+========================= */
+.donation-type-group {
+  background-color: #f5f2ea;
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+}
+ 
+.donation-type-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 10pt;
+  font-weight: 500;
+  color: #777777;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.donation-type-btn.active {
+  background: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+ 
+.donation-type-btn:not(.active):hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #1a1a1a;
+}
+
+/* =========================
+   News / Blog cards
+========================= */
+ 
+/* Category badge — orange pill */
+.news-badge {
+  display: inline-block;
+  background-color: #fdf0e8;
+  color: #e46212;
+  font-size: 9pt;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+ 
+/* Date with calendar icon */
+.news-date {
+  font-size: 9pt;
+  color: #888888;
+  white-space: nowrap;
+}
+ 
+/* "Lire la suite →" link */
+.news-read-more {
+  color: #e46212;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 10pt;
+  display: inline-flex;
+  align-items: center;
+  transition: gap 0.2s ease;
+}
+
+/* =========================
+   Partners section
+========================= */
+.partner-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  border: 1px solid #e4e0d8;
+  border-radius: 12px;
+  font-size: 11pt;
+  font-weight: 500;
+  color: #1a1a1a;
+  white-space: nowrap;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+ 
+.partner-pill:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-color: #c8c4bc;
+}
+
+/* =========================
+   Mission page — vision & mission items
+========================= */
+.mission-item {
+  background-color: #f5f2ea;
+  border: 1px solid #f5f2ea;
+  transition: box-shadow 0.2s ease;
+}
+ 
+.mission-item:hover {
+  box-shadow: 0 2px 12px rgba(228, 98, 18, 0.08);
+}
+ 
+.mission-icon-circle {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 50%;
+  background-color: #fbe8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #e46212;
+}
+
+
+
+/* =========================
+   Domaines d'Intervention cards
+========================= */
+.domaine-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e8e4dc;
+  border-radius: 12px;
+  height: 100%;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+ 
+.domaine-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  border-color: #d0ccc4;
+}
+ 
+/* Featured card — orange border highlight */
+.domaine-card--featured {
+  border-color: #e46212;
+}
+ 
+.domaine-card--featured:hover {
+  border-color: #c45510;
+  box-shadow: 0 4px 16px rgba(228, 98, 18, 0.12);
+}
+ 
+/* Green rounded-square icon */
+.domaine-icon-sq {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  background-color: #3f8834;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+/* =========================
+   Timeline
+========================= */
+ 
+/* Outer wrapper — sets the positioning context */
+.tl-wrap {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+ 
+/* The vertical center line */
+.tl-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e8e0d5;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+ 
+/* Each row = left card | icon | right card */
+.tl-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+ 
+/* Each card half takes equal width */
+.tl-card-wrap {
+  flex: 1;
+  display: flex;
+}
+ 
+/* Left row — card on the left, flush to center */
+.tl-row--left .tl-card-wrap:first-child {
+  justify-content: flex-end;
+  padding-right: 2.5rem;
+}
+.tl-row--left .tl-empty {
+  padding-left: 2.5rem;
+}
+ 
+/* Right row — card on the right, flush to center */
+.tl-row--right .tl-card-wrap:first-child {
+  order: 3;
+  justify-content: flex-start;
+  padding-left: 2.5rem;
+}
+.tl-row--right .tl-icon {
+  order: 2;
+}
+.tl-row--right .tl-empty {
+  order: 1;
+  padding-right: 2.5rem;
+}
+ 
+/* The card itself */
+.tl-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.6rem 1.8rem;
+  max-width: 340px;
+  width: 100%;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+ 
+.tl-card--featured {
+  border: 1.5px solid #e46212;
+}
+ 
+.tl-card--green {
+  background: #3f8834;
+}
+ 
+/* Year */
+.tl-year {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #e46212;
+  margin-bottom: 0.4rem;
+}
+ 
+.tl-card--green .tl-year {
+  color: rgba(255, 255, 255, 0.75);
+}
+ 
+/* Title */
+.tl-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a1a1a;
+  margin-bottom: 0.6rem;
+}
+ 
+.tl-card--green .tl-title {
+  color: #ffffff;
+}
+ 
+/* Description */
+.tl-desc {
+  font-size: 0.88rem;
+  color: #666666;
+  margin: 0;
+  line-height: 1.6;
+}
+ 
+.tl-card--green .tl-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+ 
+/* Center icon circle */
+.tl-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e46212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0 4px #f9f7f4;
+  margin-top: 1.4rem;
+  z-index: 2;
+}
+ 
+.tl-icon--green {
+  background: #3f8834;
+  box-shadow: 0 0 0 4px #f9f7f4;
+}
+ 
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .tl-line { left: 24px; }
+ 
+  .tl-row {
+    flex-direction: column;
+    padding-left: 64px;
+  }
+ 
+  .tl-row--left .tl-card-wrap:first-child,
+  .tl-row--right .tl-card-wrap:first-child {
+    order: 1;
+    justify-content: flex-start;
+    padding: 0;
+  }
+ 
+  .tl-row--right .tl-icon { order: 0; }
+  .tl-row--left  .tl-icon { order: 0; }
+ 
+  .tl-icon,
+  .tl-icon--green {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+  }
+ 
+  .tl-empty { display: none; }
+ 
+  .tl-card { max-width: 100%; text-align: left; }
+  .tl-row--right .tl-empty { order: unset; padding: 0; }
+}
+
+
+
+/* =========================
+   Project list cards
+========================= */
+.proj-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+ 
+.proj-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+ 
+.proj-card-body {
+  padding: 1.2rem 1.4rem;
+  flex: 1;
+}
+ 
+.proj-card-footer {
+  padding: 0.9rem 1.4rem 1.2rem;
+  border-top: 1px solid #f0ece4;
+}
+ 
+/* Location / beneficiaries row */
+.proj-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+}
+ 
+.proj-meta-icon {
+  font-size: 1rem;
+  color: #888;
+  flex-shrink: 0;
+}
+ 
+/* Progress bar */
+.proj-progress {
+  height: 7px;
+  border-radius: 99px;
+  background-color: #ede9e0;
+}
+ 
+.proj-progress .progress-bar {
+  border-radius: 99px;
+}
+ 
+/* =========================
+   Project detail page
+========================= */
+ 
+/* Hero */
+.proj-detail-hero {
+  position: relative;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+ 
+.proj-detail-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.25) 60%, transparent 100%);
+}
+ 
+.proj-detail-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 2.5rem;
+  padding-top: 6rem;
+}
+ 
+/* Sidebar meta icon squares */
+.proj-meta-icon-sq {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 8px;
+  background-color: #fbe8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #e46212;
+}
+
+/* =========================
+   Project status filter bar
+========================= */
+.proj-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+ 
+.proj-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 99px;
+  border: 1.5px solid #ddd8cf;
+  background: #ffffff;
+  color: #555555;
+  font-size: 10pt;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+ 
+.proj-filter-btn:hover {
+  border-color: #e46212;
+  color: #e46212;
+  background: #fff8f4;
+}
+ 
+.proj-filter-btn.active {
+  background: #e46212;
+  border-color: #e46212;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(228, 98, 18, 0.3);
+}
+ 
+/* Status badge — top-right corner of image */
+.proj-status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 9pt;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+
+
+
+
+/* =========================
+   Impact page
+========================= */
+
+/* Hero pill */
+.impact-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fbe8d8;
+  color: #e46212;
+  font-size: 10pt;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 99px;
+}
+
+/* Impact image rows */
+.impact-img-wrap {
+  position: relative;
+  border-radius: 1.3rem;
+  overflow: hidden;
+}
+
+.impact-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  border-radius: 1.3rem;
+}
+
+/* Stat badge bottom-left of image */
+.impact-stat-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background-color: #e46212;
+  color: #ffffff;
+  font-size: 10pt;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* =========================
+   Impact page timeline
+========================= */
+.itl-wrap {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Soft salmon vertical line matching screenshot */
+.itl-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #f4c4b0;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.itl-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Each side takes equal width */
+.itl-side {
+  flex: 1;
+  display: flex;
+}
+
+/* Left row — card flush to center on the left */
+.itl-row--left .itl-side:first-child {
+  justify-content: flex-end;
+  padding-right: 2.5rem;
+}
+.itl-row--left .itl-empty {
+  padding-left: 2.5rem;
+}
+
+/* Right row — card flush to center on the right */
+.itl-row--right .itl-side:first-child {
+  order: 3;
+  justify-content: flex-start;
+  padding-left: 2.5rem;
+}
+.itl-row--right .itl-dot  { order: 2; }
+.itl-row--right .itl-empty { order: 1; padding-right: 2.5rem; }
+
+/* Card — white, rounded, minimal (year + title only, matching screenshot) */
+.itl-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.2rem 1.6rem;
+  max-width: 280px;
+  width: 100%;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.itl-card--featured {
+  border: 1.5px solid #e46212;
+}
+
+.itl-card--green {
+  background: #3f8834;
+}
+
+.itl-year {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #e46212;
+  margin: 0 0 4px;
+}
+
+.itl-card--green .itl-year {
+  color: rgba(255,255,255,0.8);
+}
+
+.itl-title {
+  font-size: .9rem;
+  color: #444;
+  margin: 0;
+}
+
+.itl-card--green .itl-title {
+  color: #ffffff;
+}
+
+/* Small orange dot on the line */
+.itl-dot {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  background: #e46212;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.itl-dot--green {
+  background: #3f8834;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .itl-line { left: 16px; }
+
+  .itl-row {
+    flex-direction: column;
+    padding-left: 40px;
+  }
+
+  .itl-row--left .itl-side:first-child,
+  .itl-row--right .itl-side:first-child {
+    order: 1;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .itl-dot {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    order: 0;
+  }
+
+  .itl-row--right .itl-dot,
+  .itl-row--right .itl-empty { order: unset; padding: 0; }
+
+  .itl-empty { display: none; }
+  .itl-card  { max-width: 100%; }
+}
+
+
+* ── Hero ── */
+.don-hero {
+    background-color: #E8541A;
+    padding: 80px 0 60px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+.don-hero::before,
+.don-hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+}
+.don-hero::before {
+    width: 340px; height: 340px;
+    top: -100px; right: -80px;
+}
+.don-hero::after {
+    width: 220px; height: 220px;
+    bottom: -80px; left: -60px;
+}
+.don-hero .hero-icon {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    display: block;
+}
+.don-hero h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+.don-hero p.lead {
+    max-width: 480px;
+    margin: 0 auto;
+    opacity: 0.92;
+    font-size: 1.05rem;
+}
+
+/* ── Page body ── */
+.don-page { background: #f7f7f5; padding: 48px 0 64px; }
+
+/* ── Donation card ── */
+.don-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+}
+.don-card .section-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* ── Frequency toggle ── */
+.freq-toggle {
+    display: flex;
+    background: #f0ede8;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 24px;
+}
+.freq-toggle .freq-btn {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+    transition: all .2s;
+}
+.freq-toggle .freq-btn.active {
+    background: #fff;
+    color: #111;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+}
+
+/* ── Amount grid ── */
+.amount-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 14px;
+}
+.amount-btn {
+    border: 1.5px solid #e0dbd4;
+    background: #fff;
+    border-radius: 8px;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    cursor: pointer;
+    transition: all .18s;
+}
+.amount-btn:hover { border-color: #E8541A; color: #E8541A; }
+.amount-btn.active {
+    border-color: #E8541A;
+    background: #fff5f1;
+    color: #E8541A;
+}
+
+/* ── Custom amount input ── */
+.custom-amount-wrap {
+    position: relative;
+    margin-bottom: 24px;
+}
+.custom-amount-wrap .currency-symbol {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #888;
+}
+.custom-amount-wrap input {
+    padding-left: 30px;
+    border-radius: 8px;
+    border: 1.5px solid #e0dbd4;
+    height: 46px;
+}
+.custom-amount-wrap input:focus {
+    border-color: #E8541A;
+    box-shadow: 0 0 0 3px rgba(232,84,26,.12);
+    outline: none;
+}
+
+/* ── Payment method grid ── */
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.pay-btn {
+    border: 1.5px solid #e0dbd4;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 6px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    transition: all .18s;
+}
+.pay-btn:hover { border-color: #E8541A; }
+.pay-btn.active { border-color: #E8541A; background: #fff5f1; }
+.pay-btn .pay-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+.pay-btn .pay-icon.orange { color: #f90; }
+.pay-btn .pay-icon.mtn    { color: #ffc107; }
+
+/* ── Card fields ── */
+.card-fields label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+.card-fields .form-control {
+    border-radius: 8px;
+    border: 1.5px solid #e0dbd4;
+    height: 46px;
+    font-size: 0.9rem;
+}
+.card-fields .form-control:focus {
+    border-color: #E8541A;
+    box-shadow: 0 0 0 3px rgba(232,84,26,.12);
+}
+
+/* ── Donor info ── */
+.donor-info-label {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #222;
+    margin: 20px 0 12px;
+}
+.donor-info label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+.donor-info .form-control {
+    border-radius: 8px;
+    border: 1.5px solid #e0dbd4;
+    height: 46px;
+    font-size: 0.9rem;
+}
+.donor-info .form-control:focus {
+    border-color: #E8541A;
+    box-shadow: 0 0 0 3px rgba(232,84,26,.12);
+}
+
+/* ── Submit button ── */
+.btn-donate {
+    background: #E8541A;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background .2s;
+}
+.btn-donate:hover { background: #c94612; color: #fff; }
+.secure-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* ── Sidebar ── */
+.don-sidebar { display: flex; flex-direction: column; gap: 20px; }
+
+/* Impact card */
+.impact-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+}
+.impact-card h5 {
+    font-weight: 800;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    color: #111;
+}
+.impact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+.impact-item:last-child { margin-bottom: 0; }
+.impact-check {
+    width: 20px; height: 20px;
+    background: #fff5f1;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.impact-check i { color: #E8541A; font-size: 0.75rem; }
+.impact-amount { font-weight: 800; color: #E8541A; font-size: 0.9rem; }
+.impact-desc { font-size: 0.82rem; color: #555; margin-top: 1px; }
+
+/* Transparency card */
+.transparency-card {
+    background: #2e7d32;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    color: #fff;
+}
+.transparency-card .shield-wrap {
+    width: 56px; height: 56px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 1.6rem;
+}
+.transparency-card h5 {
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.transparency-card p {
+    font-size: 0.85rem;
+    opacity: 0.88;
+    margin: 0;
+}
+
+/* Photo card */
+.photo-card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+.photo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+    .amount-grid { grid-template-columns: repeat(3, 1fr); }
+    .payment-grid { grid-template-columns: repeat(2, 1fr); }
+}
